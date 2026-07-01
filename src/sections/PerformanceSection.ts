@@ -15,9 +15,9 @@ export function PerformanceSection(): HTMLElement {
     description:
       'Notificações instantâneas de WhatsApp, Instagram e chamadas diretamente no seu pulso. Mantenha-se conectado sem precisar tirar o telefone do bolso, com uma interface fluida e design sofisticado.',
     chips: [
-      { icon: 'chat', label: 'WhatsApp' },
-      { icon: 'call', label: 'Chamadas' },
-      { icon: 'public', label: 'Redes Sociais' },
+      { icon: 'chat', label: 'WhatsApp', href: 'https://wa.me/551140029022?text=Quero%20saber%20mais%20sobre%20o%20Aura%20Watch' },
+      { icon: 'call', label: 'Chamadas', href: 'tel:+551140029022' },
+      { icon: 'public', label: 'Redes Sociais', href: 'https://instagram.com/aurawatch' },
     ],
     containerClass: 'mb-section-gap',
   })

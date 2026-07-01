@@ -5,7 +5,7 @@ interface FeatureSplitProps {
   iconColor?: string
   title: string
   description: string
-  chips?: { icon: string; label: string }[]
+  chips?: { icon: string; label: string; href?: string }[]
   listItems?: { icon: string; text: string }[]
   imageOrder?: 'first' | 'last'
   imageContainerClass?: string
@@ -59,11 +59,15 @@ export function FeatureSplit({
         <div class="flex gap-4 pt-4">
           ${chips
             .map(
-              (chip) => `
-            <div class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2">
+              (chip) => {
+                const Tag = chip.href ? 'a' : 'div'
+                const extra = chip.href ? `href="${chip.href}" target="_blank" rel="noopener noreferrer"` : ''
+                return `
+            <${Tag} ${extra} class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2 ${chip.href ? 'hover:bg-surface-container-higher transition-colors cursor-pointer' : ''}">
               <span class="material-symbols-outlined text-sm">${chip.icon}</span>
               ${chip.label}
-            </div>`
+            </${Tag}>`
+              }
             )
             .join('')}
         </div>`
