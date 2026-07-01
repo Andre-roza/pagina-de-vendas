@@ -40,6 +40,9 @@ pids/
 coverage/
 .nyc_output/
 
+# Source images (duplicated in public/assets/images/)
+Imagens/
+
 # Misc
 .cache/
 tmp/
