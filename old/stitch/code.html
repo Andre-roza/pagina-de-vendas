@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AURA WATCH - O Futuro no Seu Pulso</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#ff1744",
+                        "secondary-container": "#c5020b",
+                        "on-error": "#690005",
+                        "primary-fixed": "#d8e2ff",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-variant": "#353534",
+                        "surface": "#131313",
+                        "secondary": "#ffb4aa",
+                        "primary": "#ff5252",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-primary-fixed-variant": "#004493",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed": "#351000",
+                        "on-secondary-container": "#ffd2cc",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "outline-variant": "#414755",
+                        "on-secondary-fixed": "#410001",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "tertiary-fixed-dim": "#ffb595",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary": "#690003",
+                        "surface-container": "#201f1f",
+                        "outline": "#8b90a0",
+                        "on-background": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "surface-tint": "#ff5252",
+                        "secondary-fixed": "#ffdad5",
+                        "on-primary-container": "#ffffff",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "tertiary-container": "#ef6719",
+                        "background": "#131313",
+                        "tertiary": "#ffb595",
+                        "on-secondary-fixed-variant": "#930005",
+                        "inverse-primary": "#005bc1",
+                        "on-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-tertiary": "#571e00",
+                        "on-surface-variant": "#c1c6d7",
+                        "on-tertiary-container": "#4c1a00",
+                        "on-primary-fixed": "#001a41",
+                        "on-primary": "#002e69"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "section-gap": "160px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; }
+        .glass-panel { background: rgba(19, 19, 19, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glow-text { text-shadow: 0 0 20px rgba(255, 23, 68, 0.3); }
+        .pulse-element { animation: subtle-pulse 3s infinite alternate; }
+        @keyframes subtle-pulse { 0% { opacity: 0.8; transform: scale(1); } 100% { opacity: 1; transform: scale(1.02); } }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface/20 border-b border-white/10 transition-all duration-300">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter text-on-surface">AURA WATCH</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md hover:backdrop-blur-3xl duration-300" href="#performance">Performance</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md hover:backdrop-blur-3xl duration-300" href="#design">Design</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md hover:backdrop-blur-3xl duration-300" href="#metrics">Métricas</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md hover:backdrop-blur-3xl duration-300" href="#support">Suporte</a>
+<a class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-3 rounded-full hover:scale-105 transition-transform scale-95 active:scale-90 flex items-center gap-2" href="#buy">
+                    Compre Agora <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</a>
+</div>
+<!-- Mobile Menu Icon (Placeholder) -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 md:pt-40">
+<!-- Hero Section -->
+<section class="relative w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop min-h-[80vh] flex flex-col md:flex-row items-center justify-between mb-section-gap">
+<div class="md:w-1/2 z-10 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary font-label-caps text-label-caps mb-4">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    100% Original e Autêntico. Qualidade garantida.
+                </div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter text-on-surface glow-text leading-tight">
+                    Conectividade Total, Saúde Sob Controle. <br/>
+<span class="text-primary-container">O Futuro no Seu Pulso.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    O Smartwatch Premium que une tecnologia original, estilo inigualável e monitoramento de saúde em tempo real.
+                </p>
+<div class="glass-panel p-6 rounded-xl inline-block mt-8">
+<p class="text-on-surface-variant line-through text-sm mb-1">De R$ 289,00</p>
+<p class="font-headline-md text-headline-md text-on-surface mb-6">por apenas <span class="text-primary-container">R$ 187,00</span></p>
+<a class="inline-flex items-center justify-center gap-3 bg-primary-container text-on-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full hover:scale-105 transition-transform w-full md:w-auto" href="#buy">
+                        Compre Agora
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="md:w-1/2 relative mt-16 md:mt-0 h-[500px] w-full flex justify-center items-center">
+<!-- 3D Watch Animation -->
+<img alt="Aura Watch Premium" class="relative z-10 w-full max-w-md object-contain drop-shadow-[0_20px_50px_rgba(255,23,68,0.15)] pulse-element" data-alt="A sleek, high-end smartwatch displayed on a dark, minimalist background. The watch features a bright, detailed screen showcasing a modern watch face with health metrics. The lighting is dramatic, highlighting the premium metal finish and textured strap, creating a luxurious and high-tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN7tkQi72uNeSyuxENMkTYIHZ3RySfCNXyC2XcQo_Mze9u5BFnyfiGJWMWMI8_pnCQl5UWrvxzgB3gi9IWFitAWCn377Tt4Fd4_vt8r0m3jDEKepLJuAw4zEXQeVJQESe1N12v7P7m8eU4q6k1FZxJNwAMU-380gxN-p9g-dR-6HpB7AiSvHDjFC2b__J8PVN1jmy63ll1kQcr0v_fVRsFE00FlQ_EQSiwpbJmC01yhBNN0QtXmdOcyEcPv7uNV0HykR2gmfIjpwU"/>
+</div>
+</section>
+<!-- Features Grid (Connectivity & Health) -->
+<section class="bg-surface-container-low py-section-gap w-full" id="performance">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Connectivity Split -->
+<div class="flex flex-col md:flex-row items-center gap-16 mb-section-gap">
+<div class="md:w-1/2 order-2 md:order-1 relative">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/20 to-transparent blur-3xl -z-10 rounded-full"></div>
+<img alt="Conectividade Total" class="w-full rounded-2xl glass-panel object-cover" data-alt="Close-up of a wrist wearing the Aura Watch, displaying an incoming message notification. The background is slightly blurred, suggesting an active, urban lifestyle. The watch face is crisp and bright, contrasting with the dark, moody environment, emphasizing connectivity on the go." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHrBa1XNCwFhmhMxCuAyyMPERMQVVmMUcpNzYC_w1uf4OiUhuH24s-61FHxp9FQuXs1qhl2qEa2ZyfN2qqGOjBln5k7hZCt89LH90wLRkgAKMyXjsWnd1hthawbAiXU4erIYqQSgcR65bS_sTb8eHlQ5lGLyGwfDC1R721wJbcE41A7CtB04ohpmzBcNFxGcEeeAh58POaPixrMA3p8EVlNGenFa7cs-sEGXz5T4auMWa7SxcBVD1Y0p8guhvyHoaLAwxVt8iFzTo"/>
+</div>
+<div class="md:w-1/2 order-1 md:order-2 space-y-6">
+<span class="material-symbols-outlined text-4xl text-primary-container p-4 glass-panel rounded-full inline-block">notifications_active</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Nunca perca o que importa.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Notificações instantâneas de WhatsApp, Instagram e chamadas diretamente no seu pulso. Mantenha-se conectado sem precisar tirar o telefone do bolso, com uma interface fluida e design sofisticado.
+                        </p>
+<div class="flex gap-4 pt-4">
+<div class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2"><span class="material-symbols-outlined text-sm">chat</span> WhatsApp</div>
+<div class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span> Chamadas</div>
+<div class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2"><span class="material-symbols-outlined text-sm">public</span> Redes Sociais</div>
+</div>
+</div>
+</div>
+<!-- Health Split -->
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 space-y-6">
+<span class="material-symbols-outlined text-4xl text-secondary-container p-4 glass-panel rounded-full inline-block">ecg_heart</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Seu assistente pessoal de bem-estar.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Monitore sono, frequência cardíaca e pressão arterial. Lembretes inteligentes para água e medicamentos. Uma visão completa da sua saúde em tempo real.
+                        </p>
+<ul class="space-y-4 pt-4">
+<li class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined text-primary">water_drop</span> Lembretes de Hidratação</li>
+<li class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined text-primary">bedtime</span> Monitoramento de Sono Profundo</li>
+<li class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined text-primary">monitor_heart</span> Ritmo Cardíaco 24/7</li>
+</ul>
+</div>
+<div class="md:w-1/2 relative h-[400px] rounded-2xl glass-panel overflow-hidden flex justify-center items-center">
+<img alt="Monitoramento de Saúde" class="relative z-10 w-3/4 object-contain" data-alt="A person running outdoors, wearing the Aura Watch. The focus is on the watch face displaying fitness metrics like distance and heart rate. The scene has a dynamic, cinematic feel with high-contrast lighting, emphasizing performance and endurance in a sleek, modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACFm1XN9o00eXThlbXMdfB067f7rNoGqi8QUINpw7ra49CiUX_6zXhmoc8oQm4aEic2jUE-mUDyCCTqiZz8Tc7SuB1Y14CraU1q443esvBfitwbxuW2PACMbBPKljdmnNkzmMQHyl5k49zVXvif_hJNO3UyCbQRPiUI9SIkBXnzhmiiAXLr1YwH-e5PTCIDdYYbsnNYOC1kN1PmGROFmZtK1CatRx5SAr9p6GBV2Ba4B8OD4gLvV_B5da36la88oFaSrnj2oGa7KY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs Bento Grid -->
+<section class="py-section-gap w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="metrics">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">Engenharia de Precisão</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Especificações técnicas detalhadas para quem exige o melhor do design e funcionalidade.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Image Panel -->
+<div class="md:col-span-2 glass-panel rounded-2xl overflow-hidden relative h-[400px]">
+<img alt="Design Premium" class="w-full h-full object-cover opacity-70" data-alt="Close-up lifestyle shot of a man's wrist wearing the Aura Watch, showing the elegant metal band and a classic analog-style watch face. The setting is professional and sophisticated, highlighting the watch's versatility as a premium accessory for both business and leisure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMyoxtErIHjU1hUfY8S9X8GDNnIM_lpFO9OdCvK0LAKm2Fii8pfpqG7iKpvBrqeapbRDmNaYYV4kJVoHBM3Xcu72GPC9OO4IgxtVBFPFMGJ3hGQwLRK9_OntKIOW8bKgHraYKqSAmj3wDjkuC9jPu3tM3li_vtcPqtcFQwajL76n6vMLGZmc-QufRB_yodO7FRyJYunXmCP4YI0r4a6-SKwk-im0I-rPD7QDH4kFjv1idjjlUirJXnA4K2uzgFLfs1JR1uUNeZzjg"/>
+<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-background to-transparent w-full">
+<h3 class="font-headline-md text-on-surface">Design Inigualável</h3>
+<p class="text-on-surface-variant">Materiais premium e acabamento refinado.</p>
+</div>
+</div>
+<!-- Specs Table Panel -->
+<div class="glass-panel rounded-2xl p-8 flex flex-col justify-center space-y-6">
+<h3 class="font-body-lg text-body-lg text-on-surface border-b border-white/10 pb-4">Métricas de Acompanhamento</h3>
+<div class="space-y-4 text-sm text-on-surface-variant">
+<div class="flex justify-between border-b border-white/5 pb-2"><span>Passos</span> <span class="text-primary">Sim</span></div>
+<div class="flex justify-between border-b border-white/5 pb-2"><span>Calorias</span> <span class="text-primary">Sim</span></div>
+<div class="flex justify-between border-b border-white/5 pb-2"><span>Distância</span> <span class="text-primary">Sim</span></div>
+<div class="flex justify-between pb-2"><span>Sono (Profundo/Leve)</span> <span class="text-primary">Avançado</span></div>
+</div>
+</div>
+<!-- Features Grid -->
+<div class="glass-panel rounded-2xl p-8 flex flex-col items-center text-center justify-center gap-4">
+<span class="material-symbols-outlined text-3xl text-primary">language</span>
+<h4 class="font-body-lg text-on-surface">Suporte Multilíngue</h4>
+<p class="text-sm text-on-surface-variant">Português, Inglês, Francês, Espanhol e mais.</p>
+</div>
+<!-- Lifestyle Image -->
+<div class="glass-panel rounded-2xl overflow-hidden relative h-full">
+<img alt="Mostradores Personalizáveis" class="w-full h-full object-cover opacity-80" data-alt="A collection of different Aura Watch faces floating in a dark space, showcasing the variety of customization options. The glowing screens contrast against the deep black background, emphasizing the high-resolution displays and modern UI design of the smartwatch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCojBQLhRk2VGmq0NW5bpaXmV00xIfnUb-f06ry9sNoPAE3EZYWCKvQK8phyCE05bB_-vdFrzyND8VgzAEGgCd44iO_4aDzPehS1Jv3HXXVdK2dMqisv3dNaUpasb_wfhCmOStiMkFQ5pX-2gkxCQ4qHqUIr4_uciyBFseWunnPes7YW8qggn0cy7A6qTpUI5mTBmdkzDTgIsHlH3CxtOw_Vq1-tCQ-a2pqNi8LlMDOS9ofG2eF3UaGIkmE3LziUN-bbXZbT8izgN8"/>
+</div>
+<div class="glass-panel rounded-2xl overflow-hidden relative h-full">
+<img alt="Estilo para cada momento" class="w-full h-full object-cover opacity-80" data-alt="A montage of people using the Aura Watch in different contexts: running, in a meeting, and relaxing. The lighting is cohesive, moody, and premium across all scenarios, illustrating the watch as an essential companion for all aspects of a modern, active lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGbcLIYHxRMSy1A83lBWAYXZL3mdfefUlz00cddZP2Ni_mVyaCSFtl4lTYZhr9WGPAkShQL6ibhLTee5tzNZw2TzbdEdjsdcpm-j-CLRXgoMYs6p3nlj5RvPoDXDoQGVC5xdn5PJPlAiiS_suZm7-aIcofY6HPhaVxVfSh7eSUQkVBkdfeGmd-vUhI2GcTG44I0VPNuKJCVUJ6srcJvrOOHc4oiS8XONF1sb53BxkHikvTCjfyLKunhyDKFBu-kY7fnHyD9yTStY0"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Sticky CTA for Mobile) -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full backdrop-blur-2xl md:hidden border border-white/20 shadow-2xl z-50 px-margin-mobile flex justify-center bg-surface/30">
+<a class="bg-primary-container text-on-primary-container rounded-full px-6 py-3 flex items-center justify-center gap-2 font-label-caps text-label-caps w-full hover:scale-105 animate-pulse transition-transform" href="#buy">
+            Compre Agora <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</a>
+</div>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface border-t border-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-8 max-w-container-max mx-auto">
+<div class="font-display-lg-mobile md:font-headline-md text-headline-md text-on-surface tracking-tighter">AURA WATCH</div>
+<div class="flex gap-6 flex-wrap justify-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Política de Privacidade</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Termos de Serviço</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Garantia</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md opacity-80 hover:opacity-100" href="#">Sustentabilidade</a>
+</div>
+<div class="text-on-surface-variant font-body-md text-body-md text-sm">
+                © 2026 AURA Engineering. Todos os direitos reservados.
+            </div>
+</div>
+</footer>
+</body></html>
